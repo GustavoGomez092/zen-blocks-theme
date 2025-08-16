@@ -1,4 +1,7 @@
 <?php
+// Check if zen blocks plugin is active and installed
+require_once get_template_directory() . '/includes/plugin-installer.php';
+
 // add style to the blocks editor
 add_action('enqueue_block_editor_assets', function () {
   wp_enqueue_style('zen-blocks-editor-styles', get_template_directory_uri() . '/editor-styles.css', array(), '1.0.0');
