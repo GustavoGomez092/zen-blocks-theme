@@ -1,0 +1,44 @@
+/* Scoped, nested CSS for the Home Hero component */
+@reference "@/index.css";
+.home-hero {
+  /* base layout & typography */
+  @apply h-[90vh] bg-black flex items-center justify-center text-gray-200 px-6 pb-[140px] text-center;
+  /* dark gradient background and base styles */
+
+  .home-hero__inner {
+    /* default; can be overridden via inline style in editor */
+    @apply max-w-[880px] mx-auto;
+  }
+
+  .home-hero__badge {
+    @apply inline-block px-[14px] py-2 rounded-full text-xs leading-none text-gray-200 bg-white/5 border border-white/10 mb-7;
+  }
+
+  .home-hero__title {
+    /* Responsive fluid sizing */
+    @apply mb-[18px] font-extrabold tracking-[-0.02em] text-[clamp(28px,5vw,64px)];
+  }
+
+  .home-hero__subtitle {
+    @apply text-[#b5b9c3] mx-auto mb-8 max-w-[760px] text-base leading-[1.7];
+  }
+
+  .home-hero__cta {
+    @apply mt-2;
+  }
+
+  .home-hero__button {
+    @apply inline-block px-[22px] py-[14px] rounded-full text-white no-underline bg-gradient-to-b from-[#ff884d] to-[#e5632d] shadow-[0_8px_20px_rgba(229,99,45,0.35)] transition-all duration-200 ease-out;
+
+    &:hover {
+      @apply -translate-y-px shadow-[0_12px_28px_rgba(229,99,45,0.45)] brightness-105;
+    }
+  }
+
+  /* Reduced motion respects — only for hover/static, no entrance states in CSS */
+  @media (prefers-reduced-motion: reduce) {
+    .home-hero__button {
+      @apply transition-none;
+    }
+  }
+}

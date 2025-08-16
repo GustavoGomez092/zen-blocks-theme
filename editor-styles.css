@@ -1,0 +1,8 @@
+.zen-repeater-item.is-selected {
+  overflow: unset !important;
+  .block-editor-media-placeholder {
+    z-index: 9999 !important;
+    width: 300px !important;
+    height: 200px !important;
+  }
+}

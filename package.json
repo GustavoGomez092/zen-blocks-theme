@@ -1,0 +1,26 @@
+{
+	"name": "blank-theme",
+	"version": "1.0.0",
+	"description": "A blank Wordpress Block theme",
+	"license": "MIT",
+	"author": "Gustavo Gomez",
+	"type": "module",
+	"main": "src/index.js",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"devDependencies": {
+		"@tailwindcss/aspect-ratio": "^0.4.2",
+		"@tailwindcss/forms": "^0.5.10",
+		"@tailwindcss/typography": "^0.5.16",
+		"@tailwindcss/vite": "^4.1.12",
+		"tailwindcss": "^4.1.12",
+		"vite": "^7.1.2"
+	},
+	"dependencies": {
+		"gsap": "^3.13.0",
+		"lenis": "^1.3.8"
+	}
+}
