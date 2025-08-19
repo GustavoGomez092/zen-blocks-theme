@@ -1,6 +1,7 @@
 import './index.css'
 // you MUST import the CSS files for the components you create here in order for the @apply directive to work
-import './zen-blocks/home-hero/home-hero.css';
+import './zen-blocks/service-section/service-section.css';
+
 
 import gsap from "gsap";
 import scrollTrigger from "gsap/ScrollTrigger";

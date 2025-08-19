@@ -1,0 +1,64 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "zen-blocks/service-section",
+	"title": "Service Section",
+	"category": "design",
+	"icon": "layout",
+	"description": "A responsive service section with image, title, description, hours, and call-to-action button",
+	"keywords": ["service", "spa", "wellness", "section", "layout"],
+	"version": "1.0.0",
+	"textdomain": "zen-blocks",
+
+	"supports": {
+		"align": ["wide", "full"],
+		"anchor": true,
+		"customClassName": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+
+	"example": {
+		"attributes": {
+			"service_layout": "default",
+			"show_hours": true,
+			"show_cta": true
+		}
+	},
+
+	"zenb": {
+		"controls": {
+			"service_layout": {
+				"type": "select",
+				"label": "Layout Style",
+				"default": "default",
+				"options": [
+					{ "key": "default", "value": "Image Left, Content Right" },
+					{ "key": "reverse", "value": "Content Left, Image Right" },
+					{ "key": "stacked", "value": "Stacked Layout" }
+				],
+				"help": "Choose how the image and content should be arranged"
+			},
+			"show_hours": {
+				"type": "toggle",
+				"label": "Show Hours Information",
+				"default": true,
+				"help": "Display the hours of operation section"
+			},
+			"show_cta": {
+				"type": "toggle",
+				"label": "Show Call-to-Action Button",
+				"default": true,
+				"help": "Display the call-to-action button"
+			},
+			"enable_animations": {
+				"type": "toggle",
+				"label": "Enable Animations",
+				"default": false,
+				"help": "Add GSAP animations when elements come into view"
+			}
+		}
+	}
+}
